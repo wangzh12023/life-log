@@ -4,6 +4,7 @@ copyright: 'Copyright &copy; 2020-2024 Wangzh'
 # 1. 核心主题配置（以第二个配置为准）
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/avatar.png
   palette:
     # 浅色模式
