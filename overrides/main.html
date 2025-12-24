@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.is_blog_index %}
+    <div style="margin-bottom: 20px;">
+      <span style="font-size:0.9em; opacity: 0.7;"> 本站目前共记录 </span>
+      <span style="font-size:1.1em; opacity: 0.7;">{{ blog.posts | length }}</span>
+      <span style="font-size:0.9em; opacity: 0.7;"> 篇文章</span>
+    </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
