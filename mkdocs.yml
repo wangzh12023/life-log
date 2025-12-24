@@ -1,5 +1,8 @@
 site_name: life-log
+site_url: https://wangzh12023.github.io/life-log/
 copyright: 'Copyright &copy; 2020-2024 Wangzh'
+ 
+
 
 # 1. 核心主题配置（以第二个配置为准）
 theme:
