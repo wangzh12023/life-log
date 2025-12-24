@@ -1,4 +1,4 @@
-site_name: Wangzh (life-log) # 你可以根据喜好修改
+site_name: life-log
 copyright: 'Copyright &copy; 2020-2024 Wangzh'
 
 # 1. 核心主题配置（以第二个配置为准）
@@ -79,6 +79,7 @@ plugins:
   - statistics:
       page_read_time: true
       page_check_metadata: comments
+  - macros
   - rss:
       match_path: 'blog/posts/.*'
       date_from_meta:
