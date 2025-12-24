@@ -71,7 +71,7 @@ markdown_extensions:
 plugins:
   - search
   - blog:
-      # 如果有特定的 blog 配置可以写在这里
+      archive: true
   - tags
   - git-revision-date-localized:
       enable_creation_date: true
