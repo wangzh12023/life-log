@@ -1,0 +1,94 @@
+site_name: Wangzh (life-log) # 你可以根据喜好修改
+copyright: 'Copyright &copy; 2020-2024 Wangzh'
+
+# 1. 核心主题配置（以第二个配置为准）
+theme:
+  name: material
+  logo: assets/avatar.png
+  palette:
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.top
+    - navigation.tabs
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
+
+# 2. 静态资源加载
+extra_css:
+  - stylesheets/special.css
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+
+# 3. Markdown 扩展整合（合并所有功能）
+markdown_extensions:
+  - toc:
+      permalink: "¶"
+  - footnotes
+  - def_list
+  - md_in_html
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# 4. 插件整合（合并所有功能）
+plugins:
+  - search
+  - blog:
+      # 如果有特定的 blog 配置可以写在这里
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - statistics:
+      page_read_time: true
+      page_check_metadata: comments
+  - rss:
+      match_path: 'blog/posts/.*'
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  # 如果之后需要增加 roamlinks，可以在此添加
+  # - roamlinks
+
+# 5. 其他配置
+extra:
+  homepage: Home/home2.html
