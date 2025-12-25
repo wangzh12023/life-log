@@ -1,16 +1,14 @@
 site_name: life-log
 site_url: https://wangzh12023.github.io/life-log/
-copyright: 'Copyright &copy; 2020-2024 Wangzh'
+copyright: 'Copyright &copy; Wangzh'
  
 
 
-# 1. 核心主题配置（以第二个配置为准）
 theme:
   name: material
   custom_dir: overrides
   logo: assets/avatar.png
   palette:
-    # 浅色模式
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: pink
@@ -18,7 +16,6 @@ theme:
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    # 深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: pink
@@ -28,13 +25,16 @@ theme:
         name: Switch to light mode
   features:
     - navigation.top
+    - navigation.footer
     - navigation.tabs
     - content.code.copy
     - search.suggest
     - search.highlight
     - search.share
 
-# 2. 静态资源加载
+
+
+
 extra_css:
   - stylesheets/special.css
 
@@ -43,13 +43,16 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
-# 3. Markdown 扩展整合（合并所有功能）
+
 markdown_extensions:
   - toc:
       permalink: "¶"
   - footnotes
   - def_list
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.magiclink
   - pymdownx.caret
   - pymdownx.keys
@@ -71,7 +74,7 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-# 4. 插件整合（合并所有功能）
+
 plugins:
   - search
   - blog:
@@ -91,9 +94,7 @@ plugins:
       categories:
         - categories
         - tags
-  # 如果之后需要增加 roamlinks，可以在此添加
-  # - roamlinks
 
-# 5. 其他配置
-extra:
-  homepage: Home/home2.html
+
+# extra:
+#   homepage: Home/home2.html
